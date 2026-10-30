@@ -1,0 +1,41 @@
+/* General reset for clean spacing */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* The parent navigation bar */
+.navbar {
+  background-color: #1e1e2f;    /* Dark background */
+  padding: 1rem 2rem;          /* Top/Bottom and Left/Right padding */
+  display: flex;               /* Makes logo and link-group sit side-by-side */
+  justify-content: space-between; /* Pushes logo to left, link-group to right */
+  align-items: center;         /* Centers items vertically */
+}
+
+/* Logo styling */
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* The wrapper container for the links on the right */
+.nav-links {
+  display: flex;               /* Makes the links themselves sit side-by-side */
+  gap: 20px;                   /* Creates the gap between the links */
+}
+
+/* Individual link styling */
+.nav-links a {
+  color: #ffffff;              /* White text */
+  text-decoration: none;       /* Removes the underline */
+  font-size: 1rem;
+  transition: color 0.2s ease;  /* Smooth color transition on hover */
+}
+
+/* Hover state for links */
+.nav-links a:hover {
+  color: #a78bfa;              /* Changes to a soft purple color on hover */
+}
