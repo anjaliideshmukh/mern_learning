@@ -1,0 +1,14 @@
+const name = "Anjali";
+let age = 20;
+const isStudent = true;
+const price = 50;
+const quantity = 3;
+const total= price*quantity ;
+console.log(`${name} bought ${quantity} items for a total of ${total}`);
+console.log(typeof total);
+console.log(typeof name);
+console.log(5 === "5");
+console.log(5 == "5");
+console.log(10 === "10");
+console.log("5" + 3);
+console.log("5" - 3);
