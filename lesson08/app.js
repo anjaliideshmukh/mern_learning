@@ -1,20 +1,37 @@
-const tasks = [
-  { id: 1, title: "Learn HTML", done: true },
-  { id: 2, title: "Learn CSS", done: true },
-  { id: 3, title: "Learn JS", done: false },
+// 1. Create an array of four products
+const products = [
+    { id: 1, name: "Laptop", price: 50000, inStock: true },
+    { id: 2, name: "Mobile", price: 20000, inStock: false },
+    { id: 3, name: "Headphones", price: 2000, inStock: true },
+    { id: 4, name: "Keyboard", price: 1500, inStock: true }
 ];
-// map: transform every item into something new
-const titles = tasks.map((task) => task.title);
-// ["Learn HTML", "Learn CSS", "Learn JS"]
 
-// filter: keep only items that pass a test
-const pending = tasks.filter((task) => task.done === false);
-// [{ id: 3, title: "Learn JS", done: false }]
+// 2. Print the name of the second product
+console.log(products[1].name);
 
-// find: get the first item that matches
-const task2 = tasks.find((task) => task.id === 2);
-// { id: 2, title: "Learn CSS", done: true }
-console.log(tasks.length);
-console.log(tasks[2].title);
-console.log(tasks.map((task) => task.title));
-console.log(tasks.filter((task) => task.done));
+// 3. Use map() to get only product names
+const productNames = products.map(product => product.name);
+console.log(productNames);
+
+// 4. Use filter() to get products that are in stock
+const availableProducts = products.filter(product => product.inStock === true);
+console.log(availableProducts);
+
+// 5. Use find() to get a product with a specific id
+const foundProduct = products.find(product => product.id === 3);
+console.log(foundProduct.name);
+
+// 6. Add a new product using push()
+products.push({
+    id: 5,
+    name: "Mouse",
+    price: 800,
+    inStock: true
+});
+
+console.log("Total products:", products.length);
+
+// 7. Use a for loop to print each product
+for (let i = 0; i < products.length; i++) {
+    console.log(`${products[i].name} costs ${products[i].price}`);
+}
