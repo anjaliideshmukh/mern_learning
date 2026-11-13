@@ -1,10 +1,26 @@
-import { add, multiply } from "./math.js";
+import { getGrade, isEven } from "./utils.js";
+import products from "./products.js";
+// 1. Test getGrade()
+console.log("Grade:", getGrade(85));
 
-console.log(add(2, 3));       // 5
-console.log(multiply(2, 3));  // 6
-const user = { name: "Anjali", age: 21, city: "Pune" };
-const { name, city } = user;
-console.log(name, city);
+// 2. Test isEven()
+console.log("Is 10 even?", isEven(10));
 
-const updated = { ...user, age: 22 };
-console.log(user.age, updated.age);
+// 3. Destructuring with for...of loop
+for (const { name, price } of products) {
+    console.log(`${name} costs ${price}`);
+}
+
+// 4. Spread operator
+const newProduct = {
+    id: 5,
+    name: "Mouse",
+    price: 800,
+    inStock: true
+};
+
+const allProducts = [...products, newProduct];
+
+// 5. Print array lengths
+console.log("Original products:", products.length);
+console.log("All products:", allProducts.length);
