@@ -1,4 +1,3 @@
-
 export function getGrade(marks) {
     if (marks >= 90) {
         return "A";
